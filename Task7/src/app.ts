@@ -1,5 +1,6 @@
 import {Category} from "./enums";
 import {Book, Librarian} from "./interfaces";
+import {ReferenceItem, UniversityLibrarian} from "./classes";
 
 showHello('greeting', 'TypeScript');
 

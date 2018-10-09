@@ -33,3 +33,4 @@ class UniversityLibrarian implements Librarian{
         console.log(`${this.name} is assisting by ${custName}`)
     }
 }
+export {UniversityLibrarian, ReferenceItem}
