@@ -1,3 +1,8 @@
 <p>
-  cart works!
+  -----------cart works-----------
 </p>
+<div *ngFor="let product of products">
+  <p>Product ID: {{product.id}}</p>
+  <p>Product name: {{product.name}}</p>
+  <p>Quantity of products: {{product.quantity}}</p>
+</div>
