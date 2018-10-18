@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {BookModel} from '../../models/book.model';
 
 @Component({
@@ -10,14 +10,18 @@ export class BookListComponent implements OnInit {
   books: Array<BookModel>;
 
   constructor() {
-    this.books = [
-      {id: 0, name: 'Angular 1', price: 1200, img: 'img0'},
-      {id: 1, name: 'Angular 2', price: 1201, img: 'img1'},
-      {id: 2, name: 'Angular 3', price: 1202, img: 'img2'}
-    ];
   }
 
   ngOnInit() {
+    this.books = [
+      {id: 0, name: 'Accord', price: 1200, img: 'src/assets/images/accord.jpg'},
+      {id: 1, name: 'Cruiser', price: 1201, img: 'src/assets/images/Cruiser200.jpg'},
+      {id: 2, name: 'Peugeot', price: 1202, img: 'src/assets/images/Peugeot-407.jpg'}
+    ];
+  }
+
+  onBuy(book: BookModel){
+    console.log(`BOOKlist: ${book.name}`);
   }
 
 }

@@ -1,7 +1,10 @@
-<p>
-  -----------book-list-----------
+<p style="background-color: aqua">
+  -----------product-list-----------
 </p>
-<div *ngFor="let book of books">
-  <p>Book ID: {{book.id}}</p>
+<div class="lc">
+  <app-book [book]="book" *ngFor=" let book of books"
+  (buy)="onBuy($event)"></app-book>
+  <!--<p>Book ID: {{book.id}}</p>
   <p>Book name: {{book.name}}</p>
+  <p>Book price: {{book.price}}</p>-->
 </div>
