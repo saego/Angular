@@ -20,4 +20,22 @@ export class CartComponent implements OnInit {
     ];
   }
 
+  onAdd(product: CartItemModel){
+    console.log(`Added 1 pice of ${product.name}`);
+    this.products.forEach(p => {
+      if(p.name == product.name){
+        p.quantity++;
+      }
+    });
+  }
+
+  onSub(product: CartItemModel){
+    console.log(`Substructed 1 pice of ${product.name}`);
+    this.products.forEach(p => {
+      if(p.name == product.name){
+        p.quantity--;
+      }
+    });
+  }
+
 }

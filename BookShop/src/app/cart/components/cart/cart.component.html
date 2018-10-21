@@ -2,5 +2,6 @@
   -----------cart works-----------
 </p>
 <div class="cart">
-  <app-cart-item [boughtBook] ="boughtBook" *ngFor="let boughtBook of products"></app-cart-item>
+  <app-cart-item [boughtBook] ="boughtBook" *ngFor="let boughtBook of products" (add)="onAdd($event)" (sub)="onSub($event)"></app-cart-item>
+  <button>Place an order</button>
 </div> 

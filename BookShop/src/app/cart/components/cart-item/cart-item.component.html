@@ -2,10 +2,10 @@
   --- cart-item ---
 </p>
 <div>
-<h4>ID: {{boughtBook.id}}</h4>
-<h4>Bought book name: {{boughtBook.name}}</h4>
-<h4 class="cis">Bought book price: {{boughtBook.price}}</h4>
-<h4>Quantity of books: {{boughtBook.quantity}}</h4>
-<button> + </button> 
-<button> - </button>
+<p>ID: {{boughtBook.id}}</p>
+<p>Bought book name: {{boughtBook.name}}</p>
+<p class="cis">Bought book price: {{boughtBook.price}}</p>
+<p>Quantity of books: {{boughtBook.quantity}}</p>
+<button (click)="onAdd($event)"><img src="src/assets/images/plus.jpg" class="bs"> + </button> 
+<button (click)="onSub($event)"><img src="src/assets/images/minus.jpg" class="bs"> - </button>
 </div>
