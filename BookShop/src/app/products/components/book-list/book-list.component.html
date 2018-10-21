@@ -2,7 +2,8 @@
   -----------product-list-----------
 </p>
 <div class="lc">
-  <app-book [book]="book" *ngFor=" let book of books"
+  <app-book [book]="book" 
+  *ngFor=" let book of books | async"
   (buy)="onBuy($event)"></app-book>
   <!--<p>Book ID: {{book.id}}</p>
   <p>Book name: {{book.name}}</p>

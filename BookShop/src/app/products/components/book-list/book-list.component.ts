@@ -16,7 +16,6 @@ export class BookListComponent implements OnInit {
   ngOnInit() {
     this.books = this.bookService.getBookAsync();
   }
-///
   onBuy(book: BookModel){
     console.log(`BOOKlist: ${book.name}`);
   }
