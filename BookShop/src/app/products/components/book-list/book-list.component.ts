@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {BookModel} from '../../models/book.model';
+import { BookService } from 'src/app/shared/services/book.service';
 
 @Component({
   selector: 'app-book-list',
@@ -7,19 +8,15 @@ import {BookModel} from '../../models/book.model';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-  books: Array<BookModel>;
+  books: Promise<Array<BookModel>>;
 
-  constructor() {
+  constructor(private bookService: BookService) {
   }
 
   ngOnInit() {
-    this.books = [
-      {id: 0, name: 'Accord', price: 1200, img: 'src/assets/images/accord.jpg'},
-      {id: 1, name: 'Cruiser', price: 1201, img: 'src/assets/images/Cruiser200.jpg'},
-      {id: 2, name: 'Peugeot', price: 1202, img: 'src/assets/images/Peugeot-407.jpg'}
-    ];
+    this.books = this.bookService.getBookAsync();
   }
-
+///
   onBuy(book: BookModel){
     console.log(`BOOKlist: ${book.name}`);
   }

@@ -32,7 +32,7 @@ export class CartComponent implements OnInit {
   onSub(product: CartItemModel){
     console.log(`Substructed 1 pice of ${product.name}`);
     this.products.forEach(p => {
-      if(p.name == product.name){
+      if(p.name == product.name && p.quantity > 0){
         p.quantity--;
       }
     });
