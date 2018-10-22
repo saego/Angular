@@ -5,10 +5,12 @@ import { CartModule } from './cart/cart.module';
 import { OrdersModule } from './orders/orders.module';
 import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
+import { HighlightDirective } from './shared/directives/highlight.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

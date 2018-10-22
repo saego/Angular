@@ -15,6 +15,8 @@ boughtBook: CartItemModel;
 add: EventEmitter<CartItemModel> = new EventEmitter<CartItemModel>();
 @Output()
 sub: EventEmitter<CartItemModel> = new EventEmitter<CartItemModel>();
+@Output()
+remove: EventEmitter<CartItemModel> = new EventEmitter<CartItemModel>();
 
   constructor() { }
 
@@ -29,6 +31,11 @@ sub: EventEmitter<CartItemModel> = new EventEmitter<CartItemModel>();
   onSub(){
     console.log("Substarct button was pushed");
     this.sub.emit(this.boughtBook);
+  }
+
+  onRemove(){
+    console.log("Remove product button was pushed")
+    this.remove.emit(this.boughtBook);
   }
 
 }

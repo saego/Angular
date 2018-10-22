@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {BookModel} from '../../models/book.model';
 import { BookService } from 'src/app/shared/services/book.service';
+import { CartService } from 'src/app/shared/services/cart.service';
 
 @Component({
   selector: 'app-book-list',
@@ -10,7 +11,7 @@ import { BookService } from 'src/app/shared/services/book.service';
 export class BookListComponent implements OnInit {
   books: Promise<Array<BookModel>>;
 
-  constructor(private bookService: BookService) {
+  constructor(private bookService: BookService, private cartService: CartService) {
   }
 
   ngOnInit() {
@@ -18,6 +19,7 @@ export class BookListComponent implements OnInit {
   }
   onBuy(book: BookModel){
     console.log(`BOOKlist: ${book.name}`);
+    this.cartService.addToCart(book);
   }
 
 }

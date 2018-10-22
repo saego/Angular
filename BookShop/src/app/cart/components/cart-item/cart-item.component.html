@@ -5,7 +5,7 @@
 <p>ID: {{boughtBook.id}}</p>
 <p>Bought book name: {{boughtBook.name}}</p>
 <p class="cis">Bought book price: {{boughtBook.price}}</p>
-<p>Quantity of books: {{boughtBook.quantity}}</p>
+<p>Quantity of books: {{boughtBook.quantity}} <button (click)="onRemove($event)">Remove from bucket</button></p>
 <button (click)="onAdd($event)"><img src="src/assets/images/plus.jpg" class="bs"> + </button> 
 <button (click)="onSub($event)"><img src="src/assets/images/minus.jpg" class="bs"> - </button>
 </div>

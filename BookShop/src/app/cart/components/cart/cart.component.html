@@ -1,7 +1,9 @@
 <p>
-  -----------cart works-----------
+  -----------BUCKET-----------
 </p>
-<div class="cart">
-  <app-cart-item [boughtBook] ="boughtBook" *ngFor="let boughtBook of products" (add)="onAdd($event)" (sub)="onSub($event)"></app-cart-item>
+<p>{{productsQuantity}}</p>
+<div *ngIf="productsQuantity" class="cart">
+  <app-cart-item [boughtBook] ="boughtBook" *ngFor="let boughtBook of products" (add)="onAdd($event)" (sub)="onSub($event)" (remove)="onRemove($event)"></app-cart-item>
+  <p>Total price: {{totalPrice}}</p>
   <button>Place an order</button>
 </div> 
